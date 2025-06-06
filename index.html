@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- @aframe -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School AR Map</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    html{
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="home-page">
+
+     <header>
+    <a href="#home">
+      <img src="assets/wauu.PNG" alt="School Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#navigate">Navigate</a></li>
+        <li><a href="#how-to-use" id="start-nav">Start AR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="container" id="home">
+      <h1>Welcome to the School AR Map</h1>
+      <p>Point your camera at school markers to learn about classrooms, halls, and offices in real time.</p>
+      <a href="#how-to-use" id="start-button" class="start-button">Start AR</a>
+    </div>
+  </section>
+
+  <section id="how-to-use" class="how-to-use-section">
+    <h2>How to Use</h2>
+    <div class="flex-container">
+      <div class="flex-box" data-slide="left">
+        <ol>
+          <li>Open the website on your phone or tablet.</li>
+          <li>Download and install the APK file</li>
+          <li>Open the unity app on on your android device</li>
+          <li>Point your camera at the designated AR marker.</li>
+          <li>Watch as detailed information appears in AR!</li>
+          <li>click <a href="#">here</a>  to learn more.</li>
+        </ol>
+      </div>
+      <div class="flex-box" data-slide="right">
+        <div>
+          <div class="tut-txt">
+            <h3>Watch Tutorial</h3> 
+          </div> 
+          <div class="video-tut">
+            <iframe width="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+            title="Tutorial Video" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#how-to-use" id="navigate" class="navigate">Navigate Now</a>
+
+  </section>
+
+  <section id="tut-section" class="tut-section">
+    <div class="grid-wrapper">
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+      <div class="box box3">Box 3</div>
+      <div class="box box4">Box 4</div>
+    <!--  <div class="box box5">Box 5</div>
+      <div class="box box6">Box 6</div> -->
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About This Project</h2>
+    <p>
+      Welcome to the School AR Map project. This site uses augmented reality to help students and visitors
+      navigate the school premises and learn more about each area by pointing their device at specific markers.
+    </p>
+  </section>
+
+  <div id="xrcontent"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
