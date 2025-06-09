@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 1000px;
+  height: 700px;
 }
 
 .how-to-use-section h2 {
@@ -20,7 +20,7 @@
   gap: 20px;
   width: 100%;
   max-width: 900px;
-  margin-top: 30px;
+  margin-top: 50px;
   justify-content: center;
   flex-direction: row;
   flex-grow: 1;
@@ -42,6 +42,7 @@
   transform: scale(1);
   transition: transform 0.9s ease-in-out;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  height: 350px;
 }
 
 #tut-box1{
@@ -84,11 +85,11 @@ body.home-page {
   }
 
   .tut-txt{
-    margin-top: -80px;
+    margin-top: -150px;
   }
 
   .video-tut{
-    height: 100px;
+    height: calc(1.5rem);
   }
   
   #home {
@@ -203,7 +204,7 @@ header {
   }
 
   .navigate {
-    margin-top: 50px;
+    margin-top: 0px;
     text-decoration: none;
     background-color: #2b5876;
     color: #ffffff;
@@ -298,10 +299,16 @@ header {
   
     .flex-container .flex-box {
       height: 350px !important;
+      margin-top: 30px;
     }
   }
 
   @media (max-width: 600px) {
+
+    .how-to-use-section {
+      height: 1000px;
+    }
+
     h1 {
       font-size: 1.8rem;
     }
@@ -382,6 +389,11 @@ header {
       padding: 10px 20px;
       font-size: 1rem;
     }
+
+    .navigate {
+      margin: 20px;
+      font-size: 1rem;
+    }
   }
 
   @media (max-height: 700px) {
@@ -396,7 +408,7 @@ header {
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     ol li {
       font-size: 12px;
     }
@@ -525,4 +537,10 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.how-to-use-intro {
+  color: #000;
+  font-family: sans-serif;
+  font-size: small;
 }
