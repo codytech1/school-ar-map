@@ -40,7 +40,7 @@
   <section id="how-to-use" class="how-to-use-section">
     <h2>How to Use</h2>
     <div class="flex-container">
-      <div id="tut-box" class="flex-box" data-slide="left">
+      <div id="tut-box1" class="flex-box" data-slide="left">
         <ol>
           <li>Open the website on your phone or tablet.</li>
           <li>Download and install the APK file</li>
@@ -50,7 +50,7 @@
           <li>click <a href="#">here</a>  to learn more.</li>
         </ol>
       </div>
-      <div id="tut-box" class="flex-box" data-slide="right">
+      <div id="tut-box2" class="flex-box" data-slide="right">
         <div>
           <div class="tut-txt">
             <h3>Watch Tutorial</h3> 
@@ -116,6 +116,20 @@
         menu.style.display = "none";
       }, 300);
     }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.flex-box').forEach(box => {
+      observer.observe(box);
+    });
   </script>
 </body>
 </html>
