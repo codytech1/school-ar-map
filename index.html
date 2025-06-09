@@ -31,7 +31,7 @@
 
   <section class="hero-section">
     <div class="container" id="home">
-      <h1>Welcome to the School AR Map</h1>
+      <h1>Welcome to WAUU AR Map</h1>
       <p>Point your camera at school markers to learn about classrooms, halls, and offices in real time.</p>
       <a href="#how-to-use" id="start-button" class="start-button">Start AR</a>
     </div>
@@ -66,20 +66,60 @@
         </div>
       </div>
     </div>
-    <a href="#how-to-use" id="navigate" class="navigate" id="navigate" >Navigate Now</a>
+    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+      <a href="#how-to-use" class="navigate">Navigate Now</a>
+      <a href="assets/SchoolAR.apk" class="navigate" download>Download APK</a>
+    </div>
 
   </section>
 
-  <section id="tut-section" class="tut-section">
-    <div class="grid-wrapper">
-      <div class="box box1">Box 1</div>
-      <div class="box box2">Box 2</div>
-      <div class="box box3">Box 3</div>
-      <div class="box box4">Box 4</div>
-    <!--  <div class="box box5">Box 5</div>
-      <div class="box box6">Box 6</div> -->
+
+  <section class="event-slider">
+    <h2>Recent School Events</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/event1.jpg" alt="Event 1" /></div>
+        <div class="swiper-slide"><img src="assets/event2.jpg" alt="Event 2" /></div>
+        <div class="swiper-slide"><img src="assets/event3.jpg" alt="Event 3" /></div>
+        <div class="swiper-slide"><img src="assets/event4.jpg" alt="Event 4" /></div>
+        <div class="swiper-slide"><img src="assets/event5.jpg" alt="Event 5" /></div>
+        <div class="swiper-slide"><img src="assets/event6.jpg" alt="Event 6" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Swiper initialization with smooth easing effect for autoplay transitions
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      speed: 800, // transition speed in ms
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      effect: 'slide', // default is 'slide', but speed gives smoothness
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
 
   <section id="about" class="about-section">
     <h2>About This Project</h2>
