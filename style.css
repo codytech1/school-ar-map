@@ -74,7 +74,7 @@ body.home-page {
   
   #home {
     position: relative;
-    padding-top: 50px;
+    margin-top: 0px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -107,7 +107,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(43, 88, 118, 0.95);
+  background-color: #2b5876;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,12 +216,6 @@ header {
 .menu-toggle {
   margin-left: auto;
 }
-/**
-@media (max-width: 590px) {
-  .menu-toggle {
-    margin-left: au;
-  }
-} **/
 
 .logo {
   margin-right: auto;
@@ -232,25 +226,40 @@ header {
       display: block;
     }
 
+    nav a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 5px 20px -5px;
+    }
+
     .hbtn {
       display: none;
       position: absolute;
-      top: 70px;
+      height: 1000px;
+      top: 80px;
+      bottom: 0;
       left: 0;
-      background-color: rgba(43, 88, 118, 0.95);
-      width: 220px;
+      right: 0;
+      background-color: rgb(255, 255, 255);
       border-radius: 0 0 8px 8px;
-      z-index: 999;
+      z-index: 980;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .hbtn.active {
       display: block;
+      animation: dropdownFade 0.3s ease forwards;
     }
 
     .hbtn ul {
       flex-direction: column;
       padding-left: 0;
       gap: 0;
+      align-items: flex-start;
     }
 
     .hbtn li {
@@ -260,6 +269,8 @@ header {
 
     .hbtn a {
       display: block;
+      text-align: left;
+      width: 100%;
     }
   }
 
@@ -324,6 +335,7 @@ header {
       flex-direction: column;
       padding-left: 0;
       gap: 10px;
+      border-bottom: #2b5876;
     }
 
     .logo {
@@ -347,19 +359,19 @@ header {
   }
 
   @media (max-height: 700px) {
-    li {
+    ol li {
       font-size: 10px;
     }
   }
 
   @media (max-height: 500px) {
-    li {
+    ol li {
       font-size: 5px;
     }
   }
 
   @media (max-width: 500px) {
-    li {
+    ol li {
       font-size: 5px;
     }
   }
@@ -475,5 +487,16 @@ body {
 @media (max-width: 768px) {
   .box {
     flex: 1 1 100%;
+  }
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
