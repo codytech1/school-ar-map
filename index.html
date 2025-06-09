@@ -89,9 +89,33 @@
   
   <script src="script.js"></script>
   <script>
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-      document.getElementById("dropdown-menu").classList.toggle("active");
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("dropdown-menu");
+    const navLinks = menu.querySelectorAll("a");
+
+    toggle.addEventListener("click", () => {
+      if (menu.classList.contains("active")) {
+        closeMenu();
+      } else {
+        menu.style.display = "block";
+        menu.classList.add("active");
+      }
     });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    function closeMenu() {
+      menu.classList.remove("active");
+      menu.classList.add("closing");
+      setTimeout(() => {
+        menu.classList.remove("closing");
+        menu.style.display = "none";
+      }, 300);
+    }
   </script>
 </body>
 </html>
