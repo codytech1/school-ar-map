@@ -1,5 +1,5 @@
 .how-to-use-section {
-  background-color: #ffffff;
+  background-color: #ecf5f7;
   padding: 70px 20px 50px;
   display: flex;
   flex-direction: column;
@@ -143,7 +143,7 @@ header {
 
   .about-section {
     background-color: #f0f0f0;
-    padding: 60px 20px;
+    padding: 10px 20px;
     text-align: center;
   }
   
@@ -548,4 +548,36 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.footer {
+  background-color: #2b5876;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 0px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.floating-arrow {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  background-color: #2b5876;
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+.floating-arrow:hover {
+  background-color: #4e4376;
 }
