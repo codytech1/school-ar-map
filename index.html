@@ -37,6 +37,22 @@
     </div>
   </section>
 
+  <section class="event-slider">
+    <h2>Recent School Events</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/event1.jpg" alt="Event 1" /></div>
+        <div class="swiper-slide"><img src="assets/event2.jpg" alt="Event 2" /></div>
+        <div class="swiper-slide"><img src="assets/event3.jpg" alt="Event 3" /></div>
+        <div class="swiper-slide"><img src="assets/event4.jpg" alt="Event 4" /></div>
+        <div class="swiper-slide"><img src="assets/event5.jpg" alt="Event 5" /></div>
+        <div class="swiper-slide"><img src="assets/event6.jpg" alt="Event 6" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
   <section id="how-to-use" class="how-to-use-section">
     <h2>How to Use</h2>
     <p class="how-to-use-intro">
@@ -75,16 +91,16 @@
   </section>
 
 
-  <section class="event-slider">
-    <h2>Recent School Events</h2>
+  <section class="event-slider" style="margin-bottom: 80px;">
+    <h2>Easy Guide &#128071; </h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/event1.jpg" alt="Event 1" /></div>
-        <div class="swiper-slide"><img src="assets/event2.jpg" alt="Event 2" /></div>
-        <div class="swiper-slide"><img src="assets/event3.jpg" alt="Event 3" /></div>
-        <div class="swiper-slide"><img src="assets/event4.jpg" alt="Event 4" /></div>
-        <div class="swiper-slide"><img src="assets/event5.jpg" alt="Event 5" /></div>
-        <div class="swiper-slide"><img src="assets/event6.jpg" alt="Event 6" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 1" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 2" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 3" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 4" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 5" /></div>
+        <div class="swiper-slide"><img src="assets/event01.jpg" alt="Event 6" /></div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -125,8 +141,10 @@
   <section id="about" class="about-section">
     <h2>About This Project</h2>
     <p>
-      Welcome to the School AR Map project. This site uses augmented reality to help students and visitors
-      navigate the school premises and learn more about each area by pointing their device at specific markers.
+      WAUU AR Map is an augmented reality tool that helps students and visitors navigate the school.
+      Just point your phone at special markers to see real-time info about classrooms and facilities.
+      <hr> Built by Cody, a final-year student, the project combines Unity engine and web technologies to make school
+      orientation more interactive and engaging.
     </p>
   </section>
 
@@ -175,6 +193,33 @@
     document.querySelectorAll('.flex-box').forEach(box => {
       observer.observe(box);
     });
+
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const floatingArrow = document.querySelector('.floating-arrow');
+      const heroSection = document.querySelector('.hero-section');
+
+      if (!floatingArrow || !heroSection) return;
+
+      const arrowObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            floatingArrow.style.display = 'none';
+          } else {
+            floatingArrow.style.display = 'block';
+          }
+        });
+      }, { threshold: 0.3 });
+
+      arrowObserver.observe(heroSection);
+    });
+  </script>
+  <footer class="footer">
+    <p>&copy; 2025 WAUU AR Map | Built by Cody</p>
+    <p>Powered by Unity & WebAR | Version 1.0</p>
+    <p><a href="mailto:cody@email.com" style="color: white;">Contact Me</a></p>
+    <a href="#home" class="floating-arrow" title="Back to top">↑</a>
+  </footer>
 </body>
 </html>
